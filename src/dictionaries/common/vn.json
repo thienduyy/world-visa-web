@@ -1,0 +1,11 @@
+{
+	"header": {
+		"menu": {
+			"about": "Giới thiệu",
+			"services_visa": "Dịch vụ visa",
+			"services_other": "Dịch vụ khác",
+			"feedback": "Feedback khách hàng",
+			"contact": "Liên hệ ngay"
+		}
+	}
+}
