@@ -1,0 +1,222 @@
+export const serviceVisa = (common) => [
+	{
+		title: common.header.region.asia,
+		href: '/#asia',
+		country: [
+			{ title: common.header.country.korean, href: '/korean' },
+			{ title: common.header.country.taiwan, href: '/taiwan' },
+			{ title: common.header.country.japan, href: '/japan' },
+			{ title: common.header.country.china, href: '/china' },
+			{ title: common.header.country.thailand, href: '/thailand' },
+			{ title: common.header.country.singapore, href: '/singapore' },
+			{ title: common.header.country.india, href: '/india' },
+			{ title: common.header.country.geogia, href: '/geogia' },
+			{ title: common.header.country.bangladesh, href: '/bangladesh' },
+			{ title: common.header.country.hongkong, href: '/hongkong' },
+			{ title: common.header.country.pakistan, href: '/pakistan' },
+			{ title: common.header.country.sri_lanka, href: '/sri-lanka' },
+			{ title: common.header.country.philippines, href: '/philippines' },
+			{ title: common.header.country.indonesia, href: '/indonesia' },
+			{ title: common.header.country.cambodia, href: '/cambodia' },
+			{ title: common.header.country.laos, href: '/laos' },
+			{ title: common.header.country.uzbekistan, href: '/uzbekistan' },
+			{ title: common.header.country.russia, href: '/russia' },
+		],
+	},
+	{
+		title: common.header.region.europe,
+		href: '/#europe',
+		country: [
+			{ title: common.header.country.france, href: '/france' },
+			{ title: common.header.country.spain, href: '/spain' },
+			{ title: common.header.country.sweeden, href: '/sweeden' },
+			{ title: common.header.country.germany, href: '/germany' },
+			{ title: common.header.country.finland, href: '/finland' },
+			{ title: common.header.country.nauy, href: '/nauy' },
+			{ title: common.header.country.poland, href: '/poland' },
+			{ title: common.header.country.italy, href: '/italy' },
+			{ title: common.header.country.geecee, href: '/geecee' },
+			{ title: common.header.country.hungary, href: '/hungary' },
+			{ title: common.header.country.portugal, href: '/portugal' },
+			{ title: common.header.country.austria, href: '/austria' },
+			{ title: common.header.country.netherlands, href: '/netherlands' },
+			{ title: common.header.country.czech, href: '/czech' },
+			{ title: common.header.country.denmark, href: '/denmark' },
+			{ title: common.header.country.belgium, href: '/belgium' },
+			{ title: common.header.country.switzerland, href: '/switzerland' },
+			{ title: common.header.country.uk, href: '/uk' },
+			{ title: common.header.country.ireland, href: '/ireland' },
+			{ title: common.header.country.iceland, href: '/iceland' },
+		],
+	},
+	{
+		title: common.header.region.america,
+		href: '/#america',
+		country: [
+			{ title: common.header.country.usa, href: '/usa' },
+			{ title: common.header.country.canada, href: '/canada' },
+			{ title: common.header.country.cuba, href: '/cuba' },
+			{ title: common.header.country.peru, href: '/peru' },
+			{ title: common.header.country.columbia, href: '/columbia' },
+			{ title: common.header.country.iceland, href: '/iceland' },
+			{ title: common.header.country.mexico, href: '/mexico' },
+			{ title: common.header.country.brazil, href: '/brazil' },
+			{ title: common.header.country.suriname, href: '/suriname' },
+		],
+	},
+	{
+		title: common.header.region.africa,
+		href: '/#africa',
+		country: [
+			{ title: common.header.country.egypt, href: '/egypt' },
+			{ title: common.header.country.south_africa, href: '/south-africa' },
+			{ title: common.header.country.algeria, href: '/algeria' },
+			{ title: common.header.country.botswana, href: '/botswana' },
+			{ title: common.header.country.ethiopia, href: '/ethiopia' },
+			{ title: common.header.country.kenya, href: '/kenya' },
+			{ title: common.header.country.tanzania, href: '/tanzania' },
+			{ title: common.header.country.madagascar, href: '/madagascar' },
+			{ title: common.header.country.nigeria, href: '/nigeria' },
+			{ title: common.header.country.ivory_coast, href: '/ivory-coast' },
+			{ title: common.header.country.morocco, href: '/morocco' },
+		],
+	},
+	{
+		title: common.header.region.oceania,
+		href: '/#oceania',
+		country: [
+			{ title: common.header.country.australia, href: '/australia' },
+			{ title: common.header.country.new_zealand, href: '/new-zealand' },
+		],
+	},
+];
+
+export const asian = (common) => ({
+	title: common.header.region.asia,
+	href: '/#asia',
+	country: [
+		{ title: common.header.country.korean, href: '/korean' },
+		{ title: common.header.country.taiwan, href: '/taiwan' },
+		{ title: common.header.country.japan, href: '/japan' },
+		{ title: common.header.country.china, href: '/china' },
+		{ title: common.header.country.thailand, href: '/thailand' },
+		{ title: common.header.country.singapore, href: '/singapore' },
+		{ title: common.header.country.india, href: '/india' },
+		{ title: common.header.country.geogia, href: '/geogia' },
+		{ title: common.header.country.bangladesh, href: '/bangladesh' },
+		{ title: common.header.country.hongkong, href: '/hongkong' },
+		{ title: common.header.country.pakistan, href: '/pakistan' },
+		{ title: common.header.country.sri_lanka, href: '/sri-lanka' },
+		{ title: common.header.country.philippines, href: '/philippines' },
+		{ title: common.header.country.indonesia, href: '/indonesia' },
+		{ title: common.header.country.cambodia, href: '/cambodia' },
+		{ title: common.header.country.laos, href: '/laos' },
+		{ title: common.header.country.uzbekistan, href: '/uzbekistan' },
+		{ title: common.header.country.russia, href: '/russia' },
+	],
+});
+
+export const europe = (common) => ({
+	title: common.header.region.europe,
+	href: '/#europe',
+	country: [
+		{ title: common.header.country.france, href: '/france' },
+		{ title: common.header.country.spain, href: '/spain' },
+		{ title: common.header.country.sweeden, href: '/sweeden' },
+		{ title: common.header.country.germany, href: '/germany' },
+		{ title: common.header.country.finland, href: '/finland' },
+		{ title: common.header.country.nauy, href: '/nauy' },
+		{ title: common.header.country.poland, href: '/poland' },
+		{ title: common.header.country.italy, href: '/italy' },
+		{ title: common.header.country.geecee, href: '/geecee' },
+		{ title: common.header.country.hungary, href: '/hungary' },
+		{ title: common.header.country.portugal, href: '/portugal' },
+		{ title: common.header.country.austria, href: '/austria' },
+		{ title: common.header.country.netherlands, href: '/netherlands' },
+		{ title: common.header.country.czech, href: '/czech' },
+		{ title: common.header.country.denmark, href: '/denmark' },
+		{ title: common.header.country.belgium, href: '/belgium' },
+		{ title: common.header.country.switzerland, href: '/switzerland' },
+		{ title: common.header.country.uk, href: '/uk' },
+		{ title: common.header.country.ireland, href: '/ireland' },
+		{ title: common.header.country.iceland, href: '/iceland' },
+	],
+});
+
+export const america = (common) => ({
+	title: common.header.region.america,
+	href: '/#america',
+	country: [
+		{ title: common.header.country.usa, href: '/usa' },
+		{ title: common.header.country.canada, href: '/canada' },
+		{ title: common.header.country.cuba, href: '/cuba' },
+		{ title: common.header.country.peru, href: '/peru' },
+		{ title: common.header.country.columbia, href: '/columbia' },
+		{ title: common.header.country.iceland, href: '/iceland' },
+		{ title: common.header.country.mexico, href: '/mexico' },
+		{ title: common.header.country.brazil, href: '/brazil' },
+		{ title: common.header.country.suriname, href: '/suriname' },
+	],
+});
+
+export const africa = (common) => ({
+	title: common.header.region.africa,
+	href: '/#africa',
+	country: [
+		{ title: common.header.country.egypt, href: '/egypt' },
+		{ title: common.header.country.south_africa, href: '/south-africa' },
+		{ title: common.header.country.algeria, href: '/algeria' },
+		{ title: common.header.country.botswana, href: '/botswana' },
+		{ title: common.header.country.ethiopia, href: '/ethiopia' },
+		{ title: common.header.country.kenya, href: '/kenya' },
+		{ title: common.header.country.tanzania, href: '/tanzania' },
+		{ title: common.header.country.madagascar, href: '/madagascar' },
+		{ title: common.header.country.nigeria, href: '/nigeria' },
+		{ title: common.header.country.ivory_coast, href: '/ivory-coast' },
+		{ title: common.header.country.morocco, href: '/morocco' },
+	],
+});
+
+export const oceania = (common) => ({
+	title: common.header.region.oceania,
+	href: '/#oceania',
+	country: [
+		{ title: common.header.country.australia, href: '/australia' },
+		{ title: common.header.country.new_zealand, href: '/new-zealand' },
+	],
+});
+
+export const serviceOther = (common) => [
+	{
+		title: common.header.services_other.international_driving_license,
+		href: '/international_driving_license',
+	},
+	{
+		title: common.header.services_other.evisa_vietnam,
+		href: '/evisa_vietnam',
+	},
+	{
+		title: common.header.services_other.change_driver_license,
+		href: '/change_driver_license',
+	},
+	{
+		title: common.header.services_other.work_permit,
+		href: '/work_permit',
+	},
+	{
+		title: common.header.services_other.temporary_residence_card,
+		href: '/temporary_residence_card',
+	},
+	{
+		title: common.header.services_other.visa_exempt_5_years,
+		href: '/visa_exempt_5_years',
+	},
+	{
+		title: common.header.services_other.consular_authentication,
+		href: '/consular_authentication',
+	},
+	{
+		title: common.header.services_other.translate_notarize,
+		href: '/translate_notarize',
+	},
+];
