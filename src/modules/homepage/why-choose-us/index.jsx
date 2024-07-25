@@ -1,5 +1,5 @@
 'use client';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import { MoveRight, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { useRef } from 'react';

@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import { ArrowRight, Phone } from 'lucide-react';
 import HeroTitleIcon from '@/assets/icon/HeroTitle';
 import Image from 'next/image';

@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import { ArrowRight, Phone } from 'lucide-react';
 import Image1 from '/public/images/about-us/Image-1.png';
 import Image2 from '/public/images/about-us/Image-2.png';

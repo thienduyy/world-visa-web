@@ -2,7 +2,7 @@
 import Logo from './Logo';
 import { ArrowRight } from 'lucide-react';
 
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import Menu from './Menu';
 
 const Header = ({ lang, common }) => {
