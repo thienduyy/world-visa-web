@@ -89,9 +89,9 @@ const Form = () => {
 			<p className="text-white text-[32px] font-semibold text-center">
 				Liên hệ với Thế giới visa
 			</p>
-			<div className="flex items-between justify-start gap-4">
-				<div className="w-1/3 flex flex-col gap-4">
-					<div className="grid w-full max-w-sm items-center gap-1">
+			<div className="grid grid-flow-row-dense grid-cols-1 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 gap-x-4 gap-y-4">
+				<div className="col-span-1 flex flex-col gap-4">
+					<div className="grid w-full items-center gap-1">
 						<Label
 							htmlFor="name"
 							className="text-sm font-semibold text-primary-800"
@@ -107,7 +107,7 @@ const Form = () => {
 							placeholder="Nguyễn Bình An..."
 						/>
 					</div>
-					<div className="grid w-full max-w-sm items-center gap-1">
+					<div className="grid w-full items-center gap-1">
 						<Label
 							htmlFor="phone"
 							className="text-sm font-semibold text-primary-800"
@@ -125,8 +125,8 @@ const Form = () => {
 						/>
 					</div>
 				</div>
-				<div className="w-1/3 flex flex-col gap-2 justify-between">
-					<div className="grid w-full max-w-sm items-center gap-1">
+				<div className="col-span-1 flex flex-col gap-4 justify-between">
+					<div className="grid w-full items-center gap-1">
 						<Label
 							htmlFor="email"
 							className="text-sm font-semibold text-primary-800"
@@ -142,7 +142,7 @@ const Form = () => {
 							onChange={handleChange}
 						/>
 					</div>
-					<div className="grid w-full max-w-sm items-center gap-1">
+					<div className="grid w-full items-center gap-1">
 						<Label
 							htmlFor="type"
 							className="text-sm font-semibold text-primary-800"
@@ -167,8 +167,8 @@ const Form = () => {
 						</Select>
 					</div>
 				</div>
-				<div className="w-1/3 h-auto self-stretch">
-					<div className="grid w-full max-w-sm items-center gap-1">
+				<div className="md:col-span-2 lg:col-span-1 h-auto self-stretch">
+					<div className="grid w-full items-center gap-1">
 						<Label
 							htmlFor="message"
 							className="text-sm font-semibold text-primary-800"

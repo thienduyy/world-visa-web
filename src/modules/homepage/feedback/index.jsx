@@ -14,9 +14,17 @@ const Feedback = ({}) => {
 				</p>
 				<div className="w-full !h-[inherit] pt-12">
 					<Swiper
-						slidesPerView={3}
+						slidesPerView={1}
 						spaceBetween={20}
 						className="mySwiper !overflow-y-visible !px-4"
+						breakpoints={{
+							640: {
+								slidesPerView: 2,
+							},
+							1024: {
+								slidesPerView: 3,
+							},
+						}}
 					>
 						<SwiperSlide>
 							<Item />

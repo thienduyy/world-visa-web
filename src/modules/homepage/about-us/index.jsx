@@ -11,7 +11,7 @@ const AboutUs = () => {
 	return (
 		<div className="w-full bg-gradient-to-b from-[#FCFCFC] to-[#D3EFFA]/50 pt-10 pb-20">
 			{/* grid-cols-[400px_auto] */}
-			<div className="container grid grid-cols-2 gap-x-20 py-16">
+			<div className="container grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-8 md:gap-y-12 py-10 lg:py-16">
 				<AboutUsImage />
 				<AboutUsContent />
 			</div>
@@ -90,8 +90,8 @@ const AboutUsContent = () => {
 					}
 				</span>
 			</div>
-			<div className="flex items-center justify-start gap-4">
-				<Button className="gap-2">
+			<div className="flex items-center justify-start gap-4 w-full lg:w-fit">
+				<Button className="gap-2 w-1/2">
 					<span>Lien he ngay</span>
 					<ArrowRight
 						size={14}
@@ -100,7 +100,7 @@ const AboutUsContent = () => {
 						className="bg-white rounded-full p-[2px]"
 					/>
 				</Button>
-				<Button className="gap-2" variant="outline">
+				<Button className="gap-2 w-1/2" variant="outline">
 					<span>Tim hieu them</span>
 					<Phone
 						size={14}

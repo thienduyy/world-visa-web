@@ -3,10 +3,10 @@ import Favicon from '/public/images/Metadata/favicon.ico';
 import Header from '@/components/layout/header';
 import { getCommon } from './dictionaries';
 import { defaultLocale } from '../../middleware';
-import Footer from '@/components/layout/footer';
 import Zalo from '@/components/layout/zalo';
 import BackToTop from '@/components/layout/back-to-top';
 import { Toaster } from '@/components/ui/toaster';
+import Footer from '@/components/layout/footer';
 
 export async function generateStaticParams() {
 	return [{ lang: 'en' }, { lang: 'vi' }];
@@ -35,7 +35,7 @@ export default async function RootLayout({
 				<Toaster />
 				<Header lang={lang} common={common} />
 				{children}
-				<Zalo href={""} />
+				<Zalo href={''} />
 				<BackToTop />
 				<Footer lang={lang} common={common} />
 			</body>

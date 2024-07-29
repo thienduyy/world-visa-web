@@ -12,7 +12,7 @@ export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-start w-full overflow-x-hidden">
 			<Hero />
-			<div className="relative w-full">
+			<div className="relative w-full overflow-hidden">
 				<AboutUs />
 				<ServiceProcess />
 				<Image

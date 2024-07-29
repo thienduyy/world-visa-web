@@ -12,12 +12,8 @@ const Award = () => {
 				<p className="text-[36px] font-semibold text-primary-700 cursor-pointer text-center">
 					Thành tựu đạt được
 				</p>
-				<div className="grid grid-cols-4 gap-4 justify-between items-center pt-16">
-					<Item
-						icon={<Award1 />}
-						title={'500+'}
-						content="Hồ sơ thành công"
-					/>
+				<div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 justify-between items-center pt-16">
+					<Item icon={<Award1 />} title={'500+'} content="Hồ sơ thành công" />
 					<Item
 						icon={<Award2 />}
 						title={'1.800+'}
@@ -28,11 +24,7 @@ const Award = () => {
 						title={'2.000+'}
 						content="Khách hàng hài lòng"
 					/>
-					<Item
-						icon={<Award4 />}
-						title={'3+'}
-						content="Năm kinh nghiệm"
-					/>
+					<Item icon={<Award4 />} title={'3+'} content="Năm kinh nghiệm" />
 				</div>
 			</div>
 		</div>

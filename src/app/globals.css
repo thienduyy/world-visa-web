@@ -222,10 +222,10 @@ html,
 	justify-content: center;
 	border-radius: 50%;
 	bottom: 50px;
-	right: 30px;
+	right: 1%;
 	cursor: pointer;
 	position: fixed;
-	border: 1px solid #75C8EB;
+	border: 1px solid #75c8eb;
 	z-index: 49;
 }
 

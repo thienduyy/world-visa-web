@@ -1,7 +1,7 @@
-import Form from './form';
 import { Facebook, Linkedin, Chrome } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Form from './form';
 
 const Footer = ({}) => {
 	return (
@@ -36,7 +36,7 @@ const Information = () => {
 	return (
 		<div className="mt-16 mb-4">
 			<p className="text-[28px] font-semibold text-white">World Visa</p>
-			<div className="py-6 flex justify-between text-white font-light text-sm border-b border-white/30">
+			<div className="py-6 grid grid-cols-2 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 gap-y-6 text-white font-light text-sm border-b border-white/30">
 				<div className="flex flex-col gap-y-2 justify-center">
 					<p>Location</p>
 					<p className="text-xs">Ho Chi Minh</p>
@@ -76,7 +76,9 @@ const Information = () => {
 					</Link>
 				</div>
 			</div>
-			<p className="pt-6 text-xs font-light text-white">Copyright © 2024 World Visa. All rights reserved.</p>
+			<p className="pt-6 text-xs font-light text-white">
+				Copyright © 2024 World Visa. All rights reserved.
+			</p>
 		</div>
 	);
 };

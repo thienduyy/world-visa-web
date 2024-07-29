@@ -12,7 +12,7 @@ import 'swiper/css';
 
 const Services = () => {
 	return (
-		<div className="w-full bg-gradient-to-b from-[#D3EFFA]/70 to-[#FCFCFC] pt-10 pb-20">
+		<div className="w-full bg-gradient-to-b from-[#D3EFFA]/70 to-[#FCFCFC] pt-2 pb-6 lg:pt-10 lg:pb-20">
 			{/* grid-cols-[400px_auto] */}
 			<div className="container w-full flex flex-col gap-16">
 				<ServiceVisa />
@@ -26,21 +26,25 @@ export default Services;
 
 const ServiceTitle = ({ title }) => {
 	return (
-		<div className="flex justify-between items-start">
-			<div className="flex flex-col gap-1">
-				<p className="text-[36px] font-semibold text-primary-700 cursor-pointer">
-					{title}
-				</p>
-				<span className="text-gray text-sm">
-					{
-						'Korem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed d'
-					}
-				</span>
+		<div>
+			<div className="flex justify-between items-center">
+				<div className="flex flex-col gap-1">
+					<p className="text-[36px] font-semibold text-primary-700 cursor-pointer">
+						{title}
+					</p>
+				</div>
+				<Button className="gap-1" variant="ghost">
+					<span className="text-primary-500 text-xs font-semibold">
+						Xem them
+					</span>
+					<MoveRight size={14} strokeWidth={2} color="#188AC1" />
+				</Button>
 			</div>
-			<Button className="gap-1" variant="ghost">
-				<span className="text-primary-500 text-xs font-semibold">Xem them</span>
-				<MoveRight size={14} strokeWidth={2} color="#188AC1" />
-			</Button>
+			<span className="text-gray text-sm">
+				{
+					'Korem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed d'
+				}
+			</span>
 		</div>
 	);
 };
@@ -53,16 +57,36 @@ const ServiceVisa = () => {
 			<ServiceTitle title={'Dịch vụ VISA'} />
 			<div className="w-full !h-[inherit] pt-6">
 				<Swiper
-					slidesPerView={4}
+					slidesPerView={1}
 					spaceBetween={16}
 					className="mySwiper !overflow-y-visible"
+					breakpoints={{
+						640: {
+							slidesPerView: 2,
+						},
+						1024: {
+							slidesPerView: 4,
+						},
+					}}
 				>
-					<SwiperSlide><ServiceItem /></SwiperSlide>
-					<SwiperSlide><ServiceItem /></SwiperSlide>
-					<SwiperSlide><ServiceItem /></SwiperSlide>
-					<SwiperSlide><ServiceItem /></SwiperSlide>
-					<SwiperSlide><ServiceItem /></SwiperSlide>
-					<SwiperSlide><ServiceItem /></SwiperSlide>
+					<SwiperSlide>
+						<ServiceItem />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ServiceItem />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ServiceItem />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ServiceItem />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ServiceItem />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ServiceItem />
+					</SwiperSlide>
 				</Swiper>
 			</div>
 		</div>
@@ -75,16 +99,36 @@ const ServiceOther = () => {
 			<ServiceTitle title={'Dịch vụ khác'} />
 			<div className="w-full !h-[inherit] pt-6">
 				<Swiper
-					slidesPerView={4}
+					slidesPerView={1}
 					spaceBetween={16}
 					className="mySwiper !overflow-y-visible"
+					breakpoints={{
+						640: {
+							slidesPerView: 2,
+						},
+						1024: {
+							slidesPerView: 4,
+						},
+					}}
 				>
-					<SwiperSlide><ServiceItem /></SwiperSlide>
-					<SwiperSlide><ServiceItem /></SwiperSlide>
-					<SwiperSlide><ServiceItem /></SwiperSlide>
-					<SwiperSlide><ServiceItem /></SwiperSlide>
-					<SwiperSlide><ServiceItem /></SwiperSlide>
-					<SwiperSlide><ServiceItem /></SwiperSlide>
+					<SwiperSlide>
+						<ServiceItem />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ServiceItem />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ServiceItem />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ServiceItem />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ServiceItem />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ServiceItem />
+					</SwiperSlide>
 				</Swiper>
 			</div>
 		</div>

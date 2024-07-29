@@ -9,7 +9,7 @@ const Zalo = ({ href }) => {
 			href={href ?? 'https://zaloweb.me/'}
 			target="_blank"
 			passHref
-			className="fixed z-[49] bottom-1/4 right-[1%] hover:scale-110 transition-all duration-300"
+			className="fixed z-[49] bottom-40 right-[1%] hover:scale-110 transition-all duration-300"
 		>
 			<motion.div
 				animate={{

@@ -1,4 +1,9 @@
-import { MessageSquareText, FileText, BriefcaseBusiness, CircleCheck } from 'lucide-react';
+import {
+	MessageSquareText,
+	FileText,
+	BriefcaseBusiness,
+	CircleCheck,
+} from 'lucide-react';
 
 const ServiceProcess = () => {
 	return (
@@ -8,7 +13,7 @@ const ServiceProcess = () => {
 				<p className="text-[36px] font-semibold text-primary-700 cursor-pointer text-center">
 					Quy trình dịch vụ
 				</p>
-				<div className="grid grid-cols-4 gap-6 pt-16">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 lg:pt-16">
 					<ProcessItem
 						icon={<MessageSquareText color="white" />}
 						title="Liên hệ tư vấn"
