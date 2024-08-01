@@ -35,7 +35,7 @@ const menuItems = (common) => [
 const Menu = ({ common }) => {
 	const items = menuItems(common);
 	return (
-		<NavigationMenu>
+		<NavigationMenu className="hidden lg:block">
 			<NavigationMenuList>
 				{items?.map((item, index) => (
 					<NavigationMenuItem key={index} className="relative">
@@ -53,7 +53,7 @@ const Menu = ({ common }) => {
 									<ul
 										className={cn(
 											item.href === '/#services_visa' &&
-												'grid w-max gap-[2px] gap-3 p-4 grid-cols-5 grid-flow-col h-[calc(100vh-100px)] overflow-y-auto',
+												'grid w-max gap-3 p-4 grid-cols-5 grid-flow-col h-[calc(100vh-100px)] overflow-y-auto',
 											item.href === '/#services_other' &&
 												'flex flex-col w-max p-4'
 										)}
@@ -101,7 +101,10 @@ const ListItem = React.forwardRef(
 						{...props}
 					>
 						<div
-							className={cn('group-hover:text-primary-400 group-hover:font-medium text-sm font-medium leading-none', titleClassName)}
+							className={cn(
+								'group-hover:text-primary-400 group-hover:font-medium text-sm font-medium leading-none',
+								titleClassName
+							)}
 						>
 							{title}
 						</div>
@@ -116,7 +119,12 @@ const ListItemCountry = React.forwardRef(
 	({ className, title, children, titleClassName, country, ...props }, ref) => {
 		return (
 			<li>
-				<div className={cn('text-sm font-medium leading-none pb-3', titleClassName)}>
+				<div
+					className={cn(
+						'text-sm font-medium leading-none pb-3',
+						titleClassName
+					)}
+				>
 					{title}
 				</div>
 				{country?.map((item, index) => (
@@ -132,7 +140,6 @@ const ListItemCountry = React.forwardRef(
 						>
 							<p className="group-hover:text-primary-400 group-hover:font-medium line-clamp-2 text-sm leading-snug text-muted-foreground">
 								{item.title}
-								{/* {children} */}
 							</p>
 						</Link>
 					</NavigationMenuLink>

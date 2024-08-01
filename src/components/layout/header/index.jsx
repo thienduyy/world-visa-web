@@ -1,17 +1,18 @@
 'use client';
 import Logo from './Logo';
-import { ArrowRight } from 'lucide-react';
+import { AlignJustify, ArrowRight } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import Menu from './Menu';
+import MobileMenu from './MobileMenu';
 
 const Header = ({ lang, common }) => {
 	return (
-		<header className="fixed z-[1000] top-0 w-full bg-[rgba(255, 255, 255, 0.4)] backdrop-blur-[6px]">
+		<header className="fixed z-[100] top-0 w-full bg-[rgba(255, 255, 255, 0.4)] backdrop-blur-[6px]">
 			<div className="container flex items-center justify-between py-2">
 				<Logo />
 				<Menu common={common} />
-				<Button className="gap-2">
+				<Button className="gap-2 hidden lg:flex">
 					<span>{common.header.menu.contact}</span>
 					<ArrowRight
 						size={14}
@@ -20,6 +21,7 @@ const Header = ({ lang, common }) => {
 						className="bg-white rounded-full p-[2px]"
 					/>
 				</Button>
+				<MobileMenu common={common} />
 			</div>
 		</header>
 	);
