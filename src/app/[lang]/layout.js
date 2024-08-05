@@ -1,5 +1,5 @@
 import '../globals.css';
-import Favicon from '/public/images/Metadata/favicon.ico';
+import Favicon from '../../../public/images/Metadata/favicon.ico';
 import Header from '@/components/layout/header';
 import { getCommon } from './dictionaries';
 import { defaultLocale } from '../../middleware';
@@ -19,10 +19,16 @@ export const metadata = {
 	icons: [{ rel: 'icon', url: Favicon.src }],
 };
 
+import PropTypes from 'prop-types';
+
 export default async function RootLayout({
 	children,
 	params = { lang: defaultLocale },
 }) {
+	RootLayout.propTypes = {
+		params: PropTypes.object.isRequired,
+		children: PropTypes.node.isRequired,
+	};
 	const { lang } = params;
 	if (lang !== 'en' && lang !== 'vi') {
 		return null;
@@ -31,7 +37,7 @@ export default async function RootLayout({
 	const common = await getCommon(lang);
 	return (
 		<html lang={lang ?? defaultLocale}>
-			<body className={''} id="main">
+			<body>
 				<Toaster />
 				<Header lang={lang} common={common} />
 				{children}

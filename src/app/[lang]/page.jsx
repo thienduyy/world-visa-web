@@ -3,14 +3,14 @@ import AboutUs from '@/modules/homepage/about-us';
 import ServiceProcess from '@/modules/homepage/service-process';
 import Services from '@/modules/homepage/services';
 import Image from 'next/image';
-import BackgroundAboutUs from '/public/images/homepage/bg-about-us.png';
+import BackgroundAboutUs from '../../../public/images/homepage/bg-about-us.png';
 import WhyChooseUs from '@/modules/homepage/why-choose-us';
 import Award from '@/modules/homepage/award';
 import Feedback from '@/modules/homepage/feedback';
 
 export default function Home() {
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-start w-full overflow-x-hidden">
+		<main className="flex flex-col items-center justify-start w-full overflow-x-hidden">
 			<Hero />
 			<div className="relative w-full overflow-hidden">
 				<AboutUs />

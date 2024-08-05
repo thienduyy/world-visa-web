@@ -1,10 +1,5 @@
 'use client';
-import { Button } from '@/components/ui/button';
-import { MoveRight, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-import { useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { cn } from '@/lib/utils';
 
 import 'swiper/swiper-bundle.css';
 import 'swiper/css';
@@ -13,20 +8,31 @@ import WhyChooseUs2 from '@/assets/icon/WhyChooseUs2';
 import WhyChooseUs3 from '@/assets/icon/WhyChooseUs3';
 import WhyChooseUs4 from '@/assets/icon/WhyChooseUs4';
 import WhyChooseUs5 from '@/assets/icon/WhyChooseUs5';
+import { motion } from 'framer-motion';
 
 const WhyChooseUs = () => {
 	return (
 		<div className="w-full bg-gradient-to-b from-[#FCFCFC] to-[#D3EFFA]/70 pb-6 pt-10 lg:pb-20">
 			{/* grid-cols-[400px_auto] */}
 			<div className="container w-full">
-				<div className="flex flex-col items-center pb-8 text-center">
+				<motion.div
+					whileInView={{ scale: [0, 1.8, 0.5, 1] }}
+					transition={{
+						type: 'spring',
+						stiffness: 260,
+						damping: 40,
+						duration: 1,
+						delay: 0.15,
+					}}
+					className="flex flex-col items-center pb-8 text-center"
+				>
 					<p className="text-[36px] font-semibold text-primary-700 cursor-pointer">
 						Vì sao khách hàng chọn
 					</p>
 					<p className="text-[36px] font-semibold text-primary-700 cursor-pointer">
 						Thế giới Visa?
 					</p>
-				</div>
+				</motion.div>
 				<Content />
 			</div>
 		</div>
@@ -34,6 +40,17 @@ const WhyChooseUs = () => {
 };
 
 export default WhyChooseUs;
+
+const animationLeft = {
+	hidden: {
+		opacity: 0,
+		y: '100%',
+	},
+	visible: {
+		opacity: 1,
+		y: 0,
+	},
+};
 
 const data = [
 	{
@@ -86,7 +103,18 @@ const data = [
 const Content = () => {
 	return (
 		<div className="w-full flex flex-col lg:flex-row items-center h-full gap-12 lg:gap-4">
-			<div className="relative aspect-video w-full">
+			<motion.div
+				initial={{ scale: 0, opacity: 0 }}
+				whileInView={{ scale: 1, opacity: 1 }}
+				transition={{
+					type: 'spring',
+					stiffness: 260,
+					damping: 40,
+					duration: 1,
+					delay: 0.5,
+				}}
+				className="relative aspect-video w-full"
+			>
 				<Image
 					fill
 					style={{ objectFit: 'cover' }}
@@ -95,10 +123,17 @@ const Content = () => {
 					className="static w-full h-full z-0"
 				/>
 				{/* 123 */}
-			</div>
-			<div className="w-full h-auto z-0 grid grid-cols-1 gap-4">
+			</motion.div>
+			<motion.div
+				initial="hidden"
+				whileInView="visible"
+				transition={{ staggerChildren: 0.2, delayChildren: 0.75 }}
+				className="w-full h-auto z-0 grid grid-cols-1 gap-4"
+			>
 				{data?.map((item, index) => (
-					<div
+					<motion.div
+						variants={animationLeft}
+						transition={{ duration: 0.5 }}
 						key={index}
 						className="h-auto group flex justify-start items-center p-4 gap-4 rounded-md hover:bg-white cursor-pointer hover:shadow-lg"
 					>
@@ -111,15 +146,9 @@ const Content = () => {
 								{item.description}
 							</span>
 						</div>
-					</div>
+					</motion.div>
 				))}
-			</div>
+			</motion.div>
 		</div>
 	);
 };
-
-// const Content = () => {
-// 	return (
-// 		<div className="">123</div>
-// 	);
-// };

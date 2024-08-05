@@ -1,20 +1,20 @@
 'use client';
 import { Button } from '@/components/ui/button';
-import { MoveRight, ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+import { MoveRight } from 'lucide-react';
 import { useRef } from 'react';
 import ServiceItem from './item';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { cn } from '@/lib/utils';
 
 import 'swiper/swiper-bundle.css';
 import 'swiper/css';
+import { motion } from 'framer-motion';
+import { fadeInLeft } from '@/lib/animation';
 
 const Services = () => {
 	return (
-		<div className="w-full bg-gradient-to-b from-[#D3EFFA]/70 to-[#FCFCFC] pt-2 pb-6 lg:pt-10 lg:pb-20">
+		<div className="w-full bg-gradient-to-b from-[#D3EFFA]/70 to-[#FCFCFC] pt-2 pb-6 lg:pt-10 lg:pb-10">
 			{/* grid-cols-[400px_auto] */}
-			<div className="container w-full flex flex-col gap-16">
+			<div className="container w-full flex flex-col gap-16 overflow-hidden">
 				<ServiceVisa />
 				<ServiceOther />
 			</div>
@@ -26,7 +26,17 @@ export default Services;
 
 const ServiceTitle = ({ title }) => {
 	return (
-		<div>
+		<motion.div
+			initial={{ y: '-100%', opacity: 1 }}
+			whileInView={{ y: 0, opacity: 1 }}
+			transition={{
+				type: 'spring',
+				stiffness: 300,
+				damping: 80,
+				// duration: 20,
+				delay: 0.5,
+			}}
+		>
 			<div className="flex justify-between items-center">
 				<div className="flex flex-col gap-1">
 					<p className="text-[36px] font-semibold text-primary-700 cursor-pointer">
@@ -45,7 +55,7 @@ const ServiceTitle = ({ title }) => {
 					'Korem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed d'
 				}
 			</span>
-		</div>
+		</motion.div>
 	);
 };
 
@@ -55,7 +65,12 @@ const ServiceVisa = () => {
 	return (
 		<div className="w-full overflow-y-visible">
 			<ServiceTitle title={'Dịch vụ VISA'} />
-			<div className="w-full !h-[inherit] pt-6">
+			<motion.div
+				initial="hidden"
+				whileInView="visible"
+				transition={{ staggerChildren: 0.2, delayChildren: 0.75 }}
+				className="w-full !h-[inherit] pt-6"
+			>
 				<Swiper
 					slidesPerView={1}
 					spaceBetween={16}
@@ -69,35 +84,27 @@ const ServiceVisa = () => {
 						},
 					}}
 				>
-					<SwiperSlide>
-						<ServiceItem />
-					</SwiperSlide>
-					<SwiperSlide>
-						<ServiceItem />
-					</SwiperSlide>
-					<SwiperSlide>
-						<ServiceItem />
-					</SwiperSlide>
-					<SwiperSlide>
-						<ServiceItem />
-					</SwiperSlide>
-					<SwiperSlide>
-						<ServiceItem />
-					</SwiperSlide>
-					<SwiperSlide>
-						<ServiceItem />
-					</SwiperSlide>
+					{[1, 2, 3, 4, 5, 6].map((item, index) => (
+						<SwiperSlide key={index}>
+							<ServiceItem />
+						</SwiperSlide>
+					))}
 				</Swiper>
-			</div>
+			</motion.div>
 		</div>
 	);
 };
 
 const ServiceOther = () => {
 	return (
-		<div className="">
+		<div className="w-full pb-4 overflow-y-hidden">
 			<ServiceTitle title={'Dịch vụ khác'} />
-			<div className="w-full !h-[inherit] pt-6">
+			<motion.div
+				initial="hidden"
+				whileInView="visible"
+				transition={{ staggerChildren: 0.2, delayChildren: 0.75 }}
+				className="w-full !h-[inherit] pt-6"
+			>
 				<Swiper
 					slidesPerView={1}
 					spaceBetween={16}
@@ -130,7 +137,7 @@ const ServiceOther = () => {
 						<ServiceItem />
 					</SwiperSlide>
 				</Swiper>
-			</div>
+			</motion.div>
 		</div>
 	);
 };

@@ -2,10 +2,25 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
+const animationLeft = {
+	hidden: {
+		opacity: 0,
+		x: '100%',
+	},
+	visible: {
+		opacity: 1,
+		x: 0,
+	},
+};
 const ServiceItem = () => {
 	return (
-		<div className="relative shadow-lg rounded-lg bg-white p-4 flex flex-col items-start gap-3 cursor-pointer hover:shadow-2xl hover:-translate-y-4 transition-all">
+		<motion.div
+			variants={animationLeft}
+			transition={{ duration: 0.5 }}
+			className="relative shadow-lg rounded-lg bg-white p-4 flex flex-col items-start gap-3 cursor-pointer hover:shadow-2xl hover:-translate-y-4 transition-all"
+		>
 			<div className="relative rounded-md w-full aspect-video overflow-hidden">
 				<Image
 					fill
@@ -34,7 +49,7 @@ const ServiceItem = () => {
 					className="bg-primary-500 rounded-full p-[2px]"
 				/>
 			</Button>
-		</div>
+		</motion.div>
 	);
 };
 
