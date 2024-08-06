@@ -29,7 +29,7 @@ const Award = () => {
 		},
 	];
 	return (
-		<div className="w-full bg-gradient-to-b from-[#D3EFFA]/70 to-[#D3EFFA]/30 pt-10 pb-20">
+		<div className="w-full snap-start bg-gradient-to-b from-[#D3EFFA]/70 to-[#D3EFFA]/30 pt-20 pb-10">
 			{/* grid-cols-[400px_auto] */}
 			<div className="container w-full">
 				<motion.p

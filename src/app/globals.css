@@ -137,11 +137,13 @@ html,
 	position: relative;
 	box-sizing: border-box;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	scroll-behavior: smooth;
 	padding: 0;
 	margin: 0;
 	font-weight: 400;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
 	/* background-color: #D3EFFA; */
 }
 

@@ -9,9 +9,9 @@ import {
 
 const ServiceProcess = () => {
 	return (
-		<div className="w-full bg-gradient-to-b from-[#D3EFFA]/50 to-[#D3EFFA]/70 pb-14">
+		<div className="w-full snap-center bg-gradient-to-b from-[#D3EFFA]/50 to-[#D3EFFA]/70 pb-14">
 			{/* grid-cols-[400px_auto] */}
-			<div className="container">
+			<div className="container snap-center">
 				<motion.p
 					whileInView={{ scale: [0, 1.8, 0.5, 1] }}
 					transition={{

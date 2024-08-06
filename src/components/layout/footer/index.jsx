@@ -5,7 +5,7 @@ import Form from './form';
 
 const Footer = ({}) => {
 	return (
-		<div className="bg-[#D3EFFA]/40">
+		<div className="bg-[#D3EFFA]/40 snap-center">
 			<div className="relative bg-[#42A7C3] z-1 w-full overflow-hidden rounded-t-[40px]">
 				<div className="relative !z-[1] container mt-12">
 					<Form />

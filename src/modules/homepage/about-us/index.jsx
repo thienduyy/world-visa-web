@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 
 const AboutUs = () => {
 	return (
-		<div className="w-full bg-gradient-to-b from-[#FCFCFC] to-[#D3EFFA]/50 pt-10 pb-20">
+		<div className="w-full snap-start bg-gradient-to-b from-[#FCFCFC] to-[#D3EFFA]/50 pt-10 pb-0">
 			{/* grid-cols-[400px_auto] */}
 			<div className="container grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-8 md:gap-y-12 py-10 lg:py-16">
 				<AboutUsImage />

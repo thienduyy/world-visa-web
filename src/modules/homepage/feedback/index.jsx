@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 const Feedback = ({}) => {
 	return (
-		<div className="w-full bg-gradient-to-b from-[#D3EFFA]/30 to-[#D3EFFA]/40 pt-10 pb-20">
+		<div className="w-full snap-start bg-gradient-to-b from-[#D3EFFA]/30 to-[#D3EFFA]/40 pt-10 pb-20 overflow-hidden">
 			<div className="container w-full">
 				<motion.p
 					whileInView={{ scale: [0, 1.8, 0.5, 1] }}

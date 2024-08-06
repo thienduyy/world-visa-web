@@ -8,13 +8,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import 'swiper/css';
 import { motion } from 'framer-motion';
-import { fadeInLeft } from '@/lib/animation';
 
 const Services = () => {
 	return (
-		<div className="w-full bg-gradient-to-b from-[#D3EFFA]/70 to-[#FCFCFC] pt-2 pb-6 lg:pt-10 lg:pb-10">
+		<div className="w-full snap-start bg-gradient-to-b from-[#D3EFFA]/70 to-[#FCFCFC] pt-10 pb-6 lg:pt-20 lg:pb-10">
 			{/* grid-cols-[400px_auto] */}
-			<div className="container w-full flex flex-col gap-16 overflow-hidden">
+			<div className="container snap-start w-full flex flex-col gap-16 overflow-hidden">
 				<ServiceVisa />
 				<ServiceOther />
 			</div>
@@ -27,8 +26,8 @@ export default Services;
 const ServiceTitle = ({ title }) => {
 	return (
 		<motion.div
-			initial={{ y: '-100%', opacity: 1 }}
-			whileInView={{ y: 0, opacity: 1 }}
+			initial={{ x: 100, opacity: 0 }}
+			whileInView={{ x: 0, opacity: 1 }}
 			transition={{
 				type: 'spring',
 				stiffness: 300,
@@ -63,7 +62,7 @@ const ServiceVisa = () => {
 	const sliderRef = useRef();
 
 	return (
-		<div className="w-full overflow-y-visible">
+		<div className="w-full snap-start overflow-y-visible">
 			<ServiceTitle title={'Dịch vụ VISA'} />
 			<motion.div
 				initial="hidden"
@@ -97,7 +96,7 @@ const ServiceVisa = () => {
 
 const ServiceOther = () => {
 	return (
-		<div className="w-full pb-4 overflow-y-hidden">
+		<div className="w-full snap-center pb-4 overflow-y-hidden">
 			<ServiceTitle title={'Dịch vụ khác'} />
 			<motion.div
 				initial="hidden"

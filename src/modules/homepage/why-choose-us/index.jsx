@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 
 const WhyChooseUs = () => {
 	return (
-		<div className="w-full bg-gradient-to-b from-[#FCFCFC] to-[#D3EFFA]/70 pb-6 pt-10 lg:pb-20">
+		<div className="w-full snap-start bg-gradient-to-b from-[#FCFCFC] to-[#D3EFFA]/70 pb-6 pt-20 lg:pb-10">
 			{/* grid-cols-[400px_auto] */}
 			<div className="container w-full">
 				<motion.div

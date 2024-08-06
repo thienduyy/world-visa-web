@@ -10,9 +10,9 @@ import Feedback from '@/modules/homepage/feedback';
 
 export default function Home() {
 	return (
-		<main className="flex flex-col items-center justify-start w-full overflow-x-hidden">
+		<main className="contents items-center justify-start w-full overflow-x-hidden">
 			<Hero />
-			<div className="relative w-full overflow-hidden">
+			<div className="relative h-auto w-full overflow-hidden snap-start">
 				<AboutUs />
 				<ServiceProcess />
 				<Image
